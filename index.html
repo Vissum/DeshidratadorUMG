@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>Deshidratador</title>
+</head>
+<body>
+    <nav>
+        <label class="logo">
+            <img class="umg" src="https://logotipoz.com/wp-content/uploads/2022/11/mariano-galves-sin-fondo-1.webp" alt="">
+            Proyecto Grupal
+        </label>
+        <ul> 
+            <li><a href="#descripcion">Descripción</a></li>
+            <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#funcional">Funcionamiento y Diseño</a></li>
+            <li><a href="#desafios">Coste y Desafíos</a></li>
+        </ul>
+    </nav>
+    <div class="contenedor">
+        <div class="title">
+            <h1 id="title" class="typewriter-title">Deshidratador</h1>
+            <p id="title" class="typewriter-subtitle">de alimentos</p>
+            <p>Diseño de un deshidratador simple y minimalista para facilitar la conservación de alimentos.</p>
+        </div>
+        <img class="split" src="https://www.elmonaguillo.com/images/productos/frutas_deshidratadas/10.1_frutas_deshidratadas.png" alt="">    
+    </div>  
+    <div class="descripcion" id="descripcion">
+        <img class="gif" src="https://25.media.tumblr.com/tumblr_m8kuxjuJcg1qdemqzo1_400.gif" alt="">
+        <h2 id="subtitle" class="fade-in">Grandes ideas, Grandes soluciones.</h2>
+        <p class="fade-in">Este proyecto surge de la necesidad de mitigar problemas cotidianos como podrían ser: la desnutrición, la hambruna, escasez de alimentos, intoxicación, etc.
+            <br><br>La idea principal es llevar a cabo un deshidratador eléctrico o solar, el cual nos permitiría conservar alimentos por más tiempo aumentando las reservas, con un costo de producción más bajo posible.
+        </p>
+    </div>
+    <div id="objetivos"></div>
+    <div class="Objetivos">
+        <h2 class="sub2 fade-in">¿Cuáles son los objetivos SMART de ese Proyecto?</h2>
+       
+        <ul>
+            <li>
+                <h3>Específico (Specific):</h3>
+                <p>Meta: Diseñar y construir un deshidratador de alimentos casero controlado por un termostato W1219 y un microcontrolador para lograr una deshidratación precisa y eficiente.</p>
+                <p>Ejemplo: Construir un sistema que permita deshidratar frutas, verduras y hierbas de forma uniforme, controlando la temperatura desde un dispositivo móvil.</p>
+            </li>
+            <li>
+                <h3>Medible (Measurable):</h3>
+                <p>Indicadores: Medir la temperatura interna del deshidratador, la duración del proceso de deshidratación y la uniformidad en el secado de los alimentos.</p>
+                <p>Ejemplo: Lograr una temperatura estable de 50°C durante 6 horas de deshidratación, con un margen de error máximo de ±2°C.</p>
+            </li>
+            <li>
+                <h3>Alcanzable (Achievable):</h3>
+                <p>Recursos: Utilizar componentes disponibles en el mercado y de bajo costo, como el termostato W1219 y un ventilador estándar.</p>
+                <p>Ejemplo: Construir el deshidratador con un presupuesto máximo de $50 y componentes fácilmente adquiribles en tiendas locales o en línea.</p>
+            </li>
+            <li>
+                <h3>Relevante (Relevant):</h3>
+                <p>Beneficios: Obtener alimentos deshidratados de forma saludable y natural, sin conservantes ni aditivos.</p>
+                <p>Ejemplo: Contribuir a una alimentación más saludable y sostenible al deshidratar frutas y verduras frescas para uso propio o para compartir con la familia.</p>
+            </li>
+            <li>
+                <h3>Temporal (Time-bound):</h3>
+                <p>Plazo: Completar la construcción y la implementación del sistema "Smart" en un periodo de 4 semanas.</p>
+                <p>Ejemplo: Tener el deshidratador completamente funcional y conectado a la red "Smart" antes del final del mes de mayo.</p>
+            </li>
+        </ul>
+      </div>
+
+<div id="funcional"></div>  
+
+      <div class="Objetivos">
+        <h2 class="sub2 fade-in">Funcionamiento y Diseño</h2>
+        <p class="fade-in">Aquí puedes describir el funcionamiento y diseño de tu deshidratador de alimentos casero. Puedes explicar cómo será controlado, qué materiales se utilizarán, cómo será su estructura, etc.</p>
+    </div>
+    
+    <div id="desafios"></div>
+    
+
+    <script>
+     $(document).ready(function() {
+    $(window).scroll(function() {
+        $('.fade-in').each(function() {
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > bottom_of_element) {
+                $(this).addClass('is-visible');
+            }
+        });
+    });
+
+    
+    $(".typewriter-title").each(function() {
+        var $this = $(this);
+        var text = $this.text();
+        $this.empty();
+        var index = 0;
+
+        function type() {
+            if (index < text.length) {
+                $this.append(text.charAt(index));
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+
+        setTimeout(type, 1000); 
+    });
+
+
+    $(".typewriter-subtitle").each(function() {
+        var $this = $(this);
+        var text = $this.text();
+        $this.empty(); 
+        var index = 0;
+
+        function type() {
+            if (index < text.length) {
+                $this.append(text.charAt(index));
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+
+        setTimeout(type, 2500); 
+    });
+});
+    </script>
+</body>
+</html>
